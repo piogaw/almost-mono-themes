@@ -46,6 +46,7 @@
 	          (weaker     . "#777777")
 	          (weakest    . "#dddddd")
                   (tooltipsel . "#cacaca")
+                  (tooltipbg  . "#f0f0f0")
 	          (highlight  . "#fda50f")
 	          (warning    . "#ff0000")
 	          (success    . "#00ff00")
@@ -91,6 +92,7 @@
 	  (weaker     (cdr (assoc 'weaker colors)))
 	  (weakest    (cdr (assoc 'weakest colors)))
 	  (tooltipsel (cdr (assoc 'tooltipsel colors)))
+	  (tooltipbg  (cdr (assoc 'tooltipbg colors)))
 	  (highlight  (cdr (assoc 'highlight colors)))
 	  (warning    (cdr (assoc 'warning colors)))
 	  (success    (cdr (assoc 'success colors)))
@@ -153,7 +155,7 @@
       (eshell-ls-symlink (:inherit eshell-ls-unreadable))
 
       ;; company mode
-      (company-tooltip (:background ,weakest :foreground ,foreground))
+      (company-tooltip (:background ,tooltipbg :foreground ,foreground))
       (company-tooltip-selection (:background ,tooltipsel :foreground ,foreground))
       ;;(company-tooltip-search (:background "#ff0000" :foreground "#00ff00"))
       (company-tooltip-common (:bold t))
@@ -161,7 +163,7 @@
       (company-scrollbar-bg (:background ,weaker))
       (company-scrollbar-fg (:background ,weak))
       (company-tooltip-annotation-selection (:background ,tooltipsel :foreground ,foreground :italic t))
-      (company-tooltip-annotation (:background ,weakest :foreground ,weak :italic t))
+      (company-tooltip-annotation (:background ,tooltipbg :foreground ,weak :italic t))
 
       ;; git gutter
       (git-gutter:modified (:background ,highlight :foreground ,highlight))
@@ -188,7 +190,7 @@
       (org-table (:foreground ,weak))
 
       ;; lsp-mode
-      (lsp-ui-doc-background (:background ,weakest))
+      (lsp-ui-doc-background (:background ,tooltipbg ))
 
       ))))
 
