@@ -1,3 +1,5 @@
+This fork is optimised for eink devices.
+
 Almost mono themes
 ==================
 
