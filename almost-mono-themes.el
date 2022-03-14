@@ -40,7 +40,18 @@
 	      (success	  . "#00ff00")
 	      (string     . "#3c5e2b")))
 
-    (black . ((background . "#000000")
+    (white-eink . ((background . "#ffffff")
+	          (foreground . "#000000")
+	          (weak       . "#555555")
+	          (weaker     . "#777777")
+	          (weakest    . "#dddddd")
+                  (tooltipsel . "#cacaca")
+	          (highlight  . "#fda50f")
+	          (warning    . "#ff0000")
+	          (success    . "#00ff00")
+	          (string     . "#3c5e2b")))
+
+     (black . ((background . "#000000")
 	      (foreground . "#ffffff")
 	      (weak	  . "#aaaaaa")
 	      (weaker	  . "#666666")
@@ -79,6 +90,7 @@
 	  (weak	      (cdr (assoc 'weak colors)))
 	  (weaker     (cdr (assoc 'weaker colors)))
 	  (weakest    (cdr (assoc 'weakest colors)))
+	  (tooltipsel (cdr (assoc 'tooltipsel colors)))
 	  (highlight  (cdr (assoc 'highlight colors)))
 	  (warning    (cdr (assoc 'warning colors)))
 	  (success    (cdr (assoc 'success colors)))
@@ -142,13 +154,13 @@
 
       ;; company mode
       (company-tooltip (:background ,weakest :foreground ,foreground))
-      (company-tooltip-selection (:background ,weaker :foreground ,foreground))
+      (company-tooltip-selection (:background ,tooltipsel :foreground ,foreground))
       ;;(company-tooltip-search (:background "#ff0000" :foreground "#00ff00"))
       (company-tooltip-common (:bold t))
       (company-tooltip-common-selection (:bold t))
       (company-scrollbar-bg (:background ,weaker))
       (company-scrollbar-fg (:background ,weak))
-      (company-tooltip-annotation-selection (:background ,weaker :foreground ,foreground :italic t))
+      (company-tooltip-annotation-selection (:background ,tooltipsel :foreground ,foreground :italic t))
       (company-tooltip-annotation (:background ,weakest :foreground ,weak :italic t))
 
       ;; git gutter
@@ -174,6 +186,9 @@
 
       ;; org mode
       (org-table (:foreground ,weak))
+
+      ;; lsp-mode
+      (lsp-ui-doc-background (:background ,weakest))
 
       ))))
 
