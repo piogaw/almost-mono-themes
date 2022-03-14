@@ -1,4 +1,7 @@
-This fork is optimised for eink devices.
+E-ink devices
+==================
+
+This fork is optimised for eink devices (almost-mono-white).
 
 Almost mono themes
 ==================
