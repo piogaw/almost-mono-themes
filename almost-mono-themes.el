@@ -46,7 +46,7 @@
 	          (weaker     . "#777777")
 	          (weakest    . "#dddddd")
                   (tooltipsel . "#cacaca")
-                  (tooltipbg  . "#f0f0f0")
+                  (tooltipbg  . "#dfdfdf")
 	          (highlight  . "#fda50f")
 	          (warning    . "#ff0000")
 	          (success    . "#00ff00")
